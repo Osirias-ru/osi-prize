@@ -4,7 +4,7 @@ const config = require('../config/config');
 const swaggerDef = {
   openapi: '3.0.0',
   info: {
-    title: 'HNY API documentation',
+    title: 'PRIZE API documentation',
     version,
     license: {
       name: 'MIT',
@@ -13,7 +13,7 @@ const swaggerDef = {
   },
   servers: [
     {
-      url: `https://api.hny.osirias.ru/`,
+      url: `https://api.prize.osirias.ru/`,
     },
     {
       url: `http://localhost:${config.port}/`,

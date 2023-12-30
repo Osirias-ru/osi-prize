@@ -9,7 +9,7 @@ components:
           type: string
         role:
           type: string
-          enum: [user, admin, guest]
+          enum: [user, admin]
       example:
         id: 5ebac534954b54139806c112
         name: fake name
