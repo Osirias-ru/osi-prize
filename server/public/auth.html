@@ -6,11 +6,12 @@
     <title>Your Website</title>
 </head>
 <body>
-
-<!-- Тут может быть другой контент вашего сайта -->
-<iframe 
-id="telegram-login-osi_auth_bot" src="https://oauth.telegram.org/embed/osi_auth_bot?origin=https://api.prize.osirias.ru&amp;return_to=https://api.prize.osirias.ru/auth/telegram&amp;size=large&amp;userpic=false&amp;request_access=write" width="238" height="40" frameborder="0" scrolling="no" style="overflow: hidden; color-scheme: light dark; border: none; height: 40px; width: 170px;"></iframe>
-<!-- Кнопка входа через Telegram -->
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="osi_auth_bot" data-size="large" data-userpic="false" data-auth-url="api.prize.osirias.ru/auth/telegram" data-request-access="write"></script>
+    <script async src="https://telegram.org/js/telegram-widget.js?22" 
+            data-telegram-login="osi_auth_bot" 
+            data-size="large" 
+            data-userpic="false" 
+            data-auth-url="https://api.prize.osirias.ru/auth/telegram" 
+            data-request-access="write">
+    </script>
 </body>
 </html>
