@@ -19,6 +19,12 @@ app.options("*", cors());
 
 app.use(express.static("public"));
 
+app.use(session({ 
+  secret: process.env.SESION_SECRET, 
+  resave: true, 
+  saveUninitialized: true 
+}));
+
 if (config.env === "production") {
   app.use("/auth", authLimiter);
 }
