@@ -6,7 +6,7 @@ const auth = require('@middlewares/auth');
 
 const router = express.Router();
 
-router.post('/telegram', validate(authValidation.telegramOAuth), authController.telegramOAuth);
+router.post('/callback', authController.telegramOAuth);
 
 
 module.exports = router;
