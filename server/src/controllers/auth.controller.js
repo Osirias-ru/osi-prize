@@ -9,7 +9,7 @@ const querystring = require("querystring");
   tokenService,
   emailService,
 } = require("@services");*/
-const User = require("@models/User");
+const User = require("@models/user.model");
 
 const telegramOAuth = catchAsync(async (req, res, next) => {
 });
