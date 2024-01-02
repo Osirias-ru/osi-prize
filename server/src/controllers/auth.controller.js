@@ -11,8 +11,6 @@ const querystring = require("querystring");
 } = require("@services");*/
 const User = require("@models/User");
 
-const userExists = await User.findOne({ userId });
-
 const telegramOAuth = catchAsync(async (req, res, next) => {
 });
 
@@ -45,6 +43,8 @@ const telegramOAuthCallback = catchAsync(async (req, res, next) => {
   const userId = user.id;
   const firstName = user.first_name;
   const username = user.username;
+
+  const userExists = await User.findOne({ userId });
 
   if (!userExists) {
     const newUser = new User({
