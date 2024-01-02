@@ -9,13 +9,7 @@
 <body>
 
     <header>
-        <div class="user-info">
-            <!-- Если пользователь не вошел, покажем кнопку логина -->
-            <div class="user-info">
-                <!-- Используем виджет Telegram для кнопки входа -->
-                <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="osi_prize_bot" data-size="large" data-userpic="false" data-auth-url="api.prize.osirias.ru/auth/callback" data-request-access="write"></script>
-            </div>
-        </div>
+        <div class="user-info" id="telegram-login"></div>
     </header>
 
     <main>
@@ -27,8 +21,23 @@
 
     <footer>
         <!-- Ссылки на документы и твой телеграм -->
-        <a href="/tos">Terms of Service</a> | <a href="/pp">Privacy Policy</a> | <a href="https://t.me/osirias_ru">Telegram</a>
+        <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Other Documents</a> | <a href="https://t.me/ваш_telegram_username">Telegram</a>
     </footer>
+
+    <script>
+        // Асинхронная загрузка виджета Telegram
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://telegram.org/js/telegram-widget.js?22';
+            script.async = true;
+            script.setAttribute('data-telegram-login', 'ваш_bot_username');
+            script.setAttribute('data-size', 'large');
+            script.setAttribute('data-radius', '10');
+            script.setAttribute('data-auth-url', 'ваш_node.js_server_auth_endpoint');
+
+            document.getElementById('telegram-login').appendChild(script);
+        })();
+    </script>
 
 </body>
 </html>
