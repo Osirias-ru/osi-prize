@@ -6,7 +6,7 @@ const authController = require('@controllers/auth.controller');
 
 const router = express.Router();
 
-router.post('/callback', authController.telegramOAuth);
+router.post('/callback', authController.telegramOAuthCallback);
 
 
 module.exports = router;
