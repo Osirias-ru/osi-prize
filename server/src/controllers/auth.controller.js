@@ -1,11 +1,11 @@
 const httpStatus = require("http-status");
 const catchAsync = require("@utils/catchAsync");
-const {
+/*const {
   authService,
   userService,
   tokenService,
   emailService,
-} = require("@services");
+} = require("@services");*/
 
 const telegramOAuth = catchAsync(async (req, res, next) => {
   const telegramData = req.body;
